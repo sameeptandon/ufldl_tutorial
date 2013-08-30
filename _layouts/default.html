@@ -5,7 +5,7 @@
     <title>{{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
-    <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/bootstrap_cosmo.min.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/pygments/default.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/custom.css" rel="stylesheet">
     <script type="text/javascript"
@@ -80,6 +80,28 @@
         for(i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += 'has-jax';
         }
+      });
+    </script>
+    <script>
+      /*menu handler*/
+      function stripTrailingSlash(str) {
+        if(str.substr(-1) == '/') {
+          return str.substr(0, str.length - 1);
+        }
+        return str;
+      }
+
+      var url = window.location.href;  
+      var activePage = stripTrailingSlash(url);
+
+      $('.nav a').each(function(){  
+        currentPage = stripTrailingSlash(this.href) 
+        console.log('currentPage = ' + currentPage)
+        console.log('activePage = ' + activePage)
+        if (activePage == currentPage) {
+          console.log('match')
+          $(this).addClass('active'); 
+        } 
       });
     </script>
   </body>

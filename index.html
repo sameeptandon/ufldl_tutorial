@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Your New Jekyll Site
 ---
 
 <div id="home">
@@ -8,9 +7,12 @@ title: Your New Jekyll Site
     Welcome to the Deep Learning Tutorial!
   </h3>
   <ul class="posts">
+    <a href="{{ site.baseurl }}/author">How to author content</a>
+    <!---
     {% for post in site.posts %}
     <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
+    !--->
   </ul>
   <br>
   <b>Description</b>: This tutorial will teach you the main ideas of Unsupervised Feature Learning and Deep Learning. By working through it, you will also get to implement several feature learning/deep learning algorithms, get to see them work for yourself, and learn how to apply/adapt these ideas to new problems.
