@@ -1,0 +1,15 @@
+.sidebar {
+  max-width: 45%;
+}
+
+.has-jax {
+  font: inherit; 
+  font-size: 100%;
+  background: inherit;
+  color: inherit;
+  border: inherit;
+  padding: inherit;
+  border-radius: inherit;
+  white-space: inherit;
+  box-sizing: inherit; 
+}
