@@ -6,5 +6,5 @@ var pages = [
 { name: 'Logistic Regression', link: '#', type: 'Page' },
 { name: 'Vectorization', link: '#', type: 'Page' },
 { name: 'Debugging: Gradient Checking', link: '#', type: 'Page' },
-{ name: 'Softmax Regression', link: 'about', type: 'Page' }
+{ name: 'Softmax Regression', link: '#', type: 'Page' }
 ];
