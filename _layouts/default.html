@@ -46,11 +46,34 @@
           {{ content }}
         </div>
         <div class = "col-xs-3 sidebar">
-          {% include sidebar.html %}
+          <div id="sidebar-holder">
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Generate sidebar --->
+    <script src='{{ site.baseurl }}/sidebar/sidebar.js'></script>
+    <script>
+      function renderHeading(name) {
+        return '<div class = "panel-heading">' + name + '</div>';
+      };
+      function renderItem(name, link) { 
+        return '<a href="{{site.baseurl}}/' + link + '" class="list-group-item nav">' + name +
+          '</a>';
+      };
+      renderedHtml = '<div class = "panel panel-default">';
+        for (var i = 0; i < pages.length; i++) {
+          if (pages[i].type == 'Heading') {
+            renderedHtml += renderHeading(pages[i].name);
+          }
+          if (pages[i].type == 'Page') { 
+            renderedHtml += renderItem(pages[i].name, pages[i].link);
+          }
+        };
+        renderedHtml += '</div>';
+      document.getElementById('sidebar-holder').innerHTML = renderedHtml;
+    </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -58,14 +81,11 @@
     <script>
       var inputs = document.getElementsByTagName("m");
       for (var i = 0; i < inputs.length; i++) { 
-        //console.log(inputs[i].textContent);
-        //console.log(inputs[i].parentNode.nodeName);
         wrap = '$$';
         if (inputs[i].parentNode.nodeName.toLowerCase() == 'p')  {
           wrap = '$'
         }
         inputs[i].textContent = wrap + inputs[i].textContent + wrap;
-        //console.log(inputs[i].textContent);
       }
     </script>
     <script>
@@ -94,12 +114,9 @@
       var url = window.location.href;  
       var activePage = stripTrailingSlash(url);
 
-      $('.nav a').each(function(){  
+      $('.nav').each(function(){ 
         currentPage = stripTrailingSlash(this.href) 
-        console.log('currentPage = ' + currentPage)
-        console.log('activePage = ' + activePage)
         if (activePage == currentPage) {
-          console.log('match')
           $(this).addClass('active'); 
         } 
       });
