@@ -5,11 +5,50 @@ date:   2013-08-28 13:32:12
 categories: authoring, development
 ---
 
-Hi there!
+This document explains how to setup your development environment to author
+content.
 
-When <m>a \ne 0</m>, there are two solutions to <m>ax^2 + bx + c = 0</m> and they are
+## Preliminaries ## 
+We use [Jekyll](http://jekyllrb.com) to build the site and git to deploy the site. The site is currently hosted by Github Pages. Changes pushed to Github typically take 10 minutes to show up. Hence, it is best to build the site locally, make all your changes, and then push to git when you are done.  
 
-<m>x = {-b \pm \sqrt{b^2-4ac} \over 2a}</m>
+So how exactly do you build the site locally? 
+
+1. Install Jekyll:
+        
+        apt-get install ruby-dev
+        gem install jekyll 
+
+2. Download the [github repo](http://github.com/sameeptandon/ufldl_tutorial).
+
+3. Navigate to the gh-pages branch in the repo. Build and run the site via
+
+        jekyll serve -w --baseurl ''
+
+4. In your browser, navigate to [http://localhost:4000](http://localhost:4000)
+
+That is it! Any changes you make to content will now be automatically updated to your local site.  
+
+## Writing Content ## 
+
+All content is written in Markdown (.md) files. This [cheat sheet](http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet) goes over the syntax for the files. This will tell you how to make headers, paragraphs, lists, links, insert pictures, etc. 
+
+You will also need to define some Jekyll specific options. At the beginning of each file, you must provide:
+
+
+### Code blocks ### 
+
+Syntax Highlighting with code blocks is possible. Check out the file about.md. Here's an example of `C++` code.
+
+{% highlight cpp %}
+int main(void) {
+  printf("Hello world!");
+  return 0;
+}
+{% endhighlight %}
+
+### Latex Support ###
+
+Latex support is obtained by using the `<m>` and `</m>` tags. For example, the code `<m> x = 0 </m>` will render <m> x = 0 </m>. Display type equations are also possible; just write the latex code on a new line. 
 
 <m>
 \begin{aligned} 
@@ -26,18 +65,4 @@ When <m>a \ne 0</m>, there are two solutions to <m>ax^2 + bx + c = 0</m> and the
 {1+\frac{e^{-8\pi}} {1+\ldots} } } }
 </m>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-{% highlight cpp %}
-int main(void) {
-  printf("Hello world!");
-  return 0;
-}
-{% endhighlight %}
-
+Rendering is handled by MathJax. 
