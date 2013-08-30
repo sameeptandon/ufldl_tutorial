@@ -59,5 +59,7 @@ You may complete both of these steps by looping over the examples in the trainin
 
 Once you complete the exercise successfully, the resulting plot should look something like the one below:
 
+<img src="{{site.baseurl}}/images/House_results.png">
+
 (Yours may look slightly different depending on the random choice of training and testing sets.)  Typical values for the RMS training and testing error are between 4.5 and 5.
 
