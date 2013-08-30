@@ -32,8 +32,14 @@ That is it! Any changes you make to content will now be automatically updated to
 
 All content is written in Markdown (.md) files. This [cheat sheet](http://support.mashery.com/docs/customizing_your_portal/Markdown_Cheat_Sheet) goes over the syntax for the files. This will tell you how to make headers, paragraphs, lists, links, insert pictures, etc. 
 
-You will also need to define some Jekyll specific options. At the beginning of each file, you must provide:
+You will also need to define some Jekyll specific options. At the beginning of each file, you must provide the following header (change title, date, and categories):
 
+    ---
+    layout: post
+    title:  "Authoring Content"
+    date:   2013-08-28 13:32:12
+    categories: authoring, development
+    ---
 
 ### Code blocks ### 
 
@@ -48,7 +54,7 @@ int main(void) {
 
 ### Latex Support ###
 
-Latex support is obtained by using the `<m>` and `</m>` tags. For example, the code `<m> x = 0 </m>` will render <m> x = 0 </m>. Display type equations are also possible; just write the latex code on a new line. 
+Latex support is obtained by using the `<m>` and `</m>` tags. For example, the code `<m> x = 0 </m>` will render <m> x = 0 </m>. Display type equations are also possible; just puts the tags on their own line. (See author.md in the repository for an example).  
 
 <m>
 \begin{aligned} 
