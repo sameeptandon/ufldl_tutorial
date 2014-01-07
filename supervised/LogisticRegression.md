@@ -6,9 +6,7 @@ categories: supervised
 ---
 Previously we learned how to predict continuous-valued quantities (e.g., housing prices) as a linear function of input values (e.g., the size of the house).  Sometimes we will instead wish to predict a discrete variable such as predicting whether a grid of pixel intensities represents a "0" digit or a "1" digit.  This is a classification problem.  Logistic regression is a simple classification algorithm for learning to make such decisions.  
 
-In linear regression we tried to predict the value of <m>y^{(i)}</m> for the
-<m>i</m>'th example <m>x^{(i)}</m> using a linear function <m>y = h_\theta(x) =
-\theta^\top x.</m>.  This is clearly not a great solution for predicting
+In linear regression we tried to predict the value of <m>y^{(i)}</m> for the <m>i</m>'th example <m>x^{(i)}</m> using a linear function <m>y = h_\theta(x) = \theta^\top x.</m>.  This is clearly not a great solution for predicting
 binary-valued labels <m>\left(y^{(i)} \in \{0,1\}\right)</m>.  In logistic regression we
 use a different hypothesis class to try to predict the probability that a given
 example belongs to the "1" class versus the probability that it belongs to the
@@ -44,4 +42,27 @@ Written in its vector form, the entire gradient can be expressed as:
 </m>
 
 This is essentially the same as the gradient for linear regression except that now <m>h_\theta(x) = \sigma(\theta^\top x)</m>.
+
+### Exercise 1B ###
+Starter code for this exercise is included in the [Starter Code GitHub Repo](https://github.com/amaas/stanford_dl_ex) in the ex1/ directory.
+
+In this exercise you will implement the objective function and gradient computations for logistic regression and use your code to learn to classify images of digits from the [MNIST dataset](http://yann.lecun.com/exdb/mnist/) as either "0" or "1".  Some examples of these digits are shown below:
+
+`File:Mnist_01.png`
+
+Each of the digits is is represented by a 28x28 grid of pixel intensities, which we will reformat as a vector <m>x^{(i)}</m> with 28\*28 = 784 elements.  The label is binary, so <m>y^{(i)} \in \{0,1\}</m>.
+
+You will find starter code for this exercise in the `ex1/ex1b_logreg.m` file.  The starter code file performs the following tasks for you:
+
+1.  Calls `ex1_load_mnist.m` to load the MNIST training and testing data.  In addition to loading the pixel values into a matrix <m>X</m> (so that that j'th pixel of the i'th example is <m>X_{ji} = x^{(i)}_j</m>) and the labels into a row-vector <m>y</m>, it will also perform some simple normalizations of the pixel intensities so that they tend to have zero mean and unit variance.  Even though the MNIST dataset contains 10 different digits (0-9), in this exercise we will only load the 0 and 1 digits --- the ex1_load_mnist function will do this for you.
+
+2. The code will append a row of 1's so that <m>\theta_0</m> will act as an intercept term.
+
+3. The code calls `minFunc` with the `logistic_regression.m` file as objective function.  Your job will be to fill in `logistic_regression.m` to return the objective function value and its gradient.
+
+4. After `minFunc` completes, the classification accuracy on the training set and test set will be printed out.
+
+As for the linear regression exercise, you will need to implement `logistic_regression.m` to loop over all of the training examples <m>x^{(i)}</m> and compute the objective <m>J(\theta; X,y)</m>.  Store the resulting objective value into the variable <m>f</m>.  You must also compute the gradient <m>\nabla_\theta J(\theta; X,y)</m> and store it into the variable <m>g</m>.  Once you have completed these tasks, you will be able to run the `ex1b_logreg.m` script to train the classifier and test it.
+
+If your code is functioning correctly, you should find that your classifier is able to achieve 100% accuracy on both the training and testing sets!  It turns out that this is a relatively easy classification problem because 0 and 1 digits tend to look very different.  In future exercises it will be much more difficult to get perfect results like this.
 
