@@ -48,7 +48,7 @@ Starter code for this exercise is included in the [Starter Code GitHub Repo](htt
 
 In this exercise you will implement the objective function and gradient computations for logistic regression and use your code to learn to classify images of digits from the [MNIST dataset](http://yann.lecun.com/exdb/mnist/) as either "0" or "1".  Some examples of these digits are shown below:
 
-`File:Mnist_01.png`
+<center><img src="{{site.baseurl}}/images/Mnist_01.png"></center>
 
 Each of the digits is is represented by a 28x28 grid of pixel intensities, which we will reformat as a vector <m>x^{(i)}</m> with 28\*28 = 784 elements.  The label is binary, so <m>y^{(i)} \in \{0,1\}</m>.
 
