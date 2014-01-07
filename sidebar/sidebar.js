@@ -2,9 +2,9 @@
 var pages = [
 { name: 'Supervised Learning and Optimization', link: '#', type: 'Heading' },
 { name: 'Linear Regression', link: 'supervised/LinearRegression', type: 'Page' },
-{ name: 'Logistic Regression', link: '#', type: 'Page' },
-{ name: 'Vectorization', link: '#', type: 'Page' },
-{ name: 'Debugging: Gradient Checking', link: '#', type: 'Page' },
+{ name: 'Logistic Regression', link: 'supervised/LogisticRegression', type: 'Page' },
+{ name: 'Vectorization', link: 'supervised/Vectorization', type: 'Page' },
+{ name: 'Debugging: Gradient Checking', link: 'supervised/DebuggingGradientChecking', type: 'Page' },
 { name: 'Softmax Regression', link: '#', type: 'Page' },
 { name: 'Debugging: Bias and Variance', link: '#', type: 'Page' },
 { name: 'Debugging: Optimizers and Variance', link: '#', type: 'Page' },
