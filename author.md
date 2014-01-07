@@ -13,16 +13,19 @@ We use [Jekyll](http://jekyllrb.com) to build the site and git to deploy the sit
 
 So how exactly do you build the site locally? 
 
-1. Install Jekyll:
+1. Download the [github repo](http://github.com/sameeptandon/ufldl_tutorial). Navigate to the gh-pages of the branch.
+
+2. Install [Jekyll via Github Pages](https://help.github.com/articles/using-jekyll-with-pages):
         
-        apt-get install ruby-dev
-        gem install jekyll 
+        apt-get install ruby1.9.1-dev
+        gem install bundler
+        bundle install
 
-2. Download the [github repo](http://github.com/sameeptandon/ufldl_tutorial).
+The `bundle install` command should be done at the root of the repository (in the gh-pages branch) where the `Gemfile` is. 
 
-3. Navigate to the gh-pages branch in the repo. Build and run the site via
+3. Build and run the site via
 
-        jekyll serve -w --baseurl ''
+        bundle exec jekyll serve -w --baseurl ''
 
 4. In your browser, navigate to [http://localhost:4000](http://localhost:4000)
 
