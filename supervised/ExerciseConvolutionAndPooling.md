@@ -7,7 +7,7 @@ categories: supervised
 
 ### Convolution and Pooling ###
 
-In this exercise you will and test [convolution](/supervised/FeatureExtractionUsingConvolution) and [pooling](/supervised/Pooling) functions. We have provided some [starter code](https://github.com/amaas/stanford_dl_ex/tree/master/cnn). You should write your code at the places indicated "`YOUR CODE HERE`" in the files. For this exercise, you will need to modify `cnnConvolve.m` and `cnnPool.m`.
+In this exercise you will and test [convolution]({{site.baseurl}}/supervised/FeatureExtractionUsingConvolution) and [pooling]({{site.baseurl}}/supervised/Pooling) functions. We have provided some [starter code](https://github.com/amaas/stanford_dl_ex/tree/master/cnn). You should write your code at the places indicated "`YOUR CODE HERE`" in the files. For this exercise, you will need to modify `cnnConvolve.m` and `cnnPool.m`.
 
 ## Dependencies ##
 
