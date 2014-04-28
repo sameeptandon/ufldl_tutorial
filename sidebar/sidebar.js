@@ -19,7 +19,7 @@ var pages = [
 { name: 'Convolutional Neural Network', link: 'supervised/ConvolutionalNeuralNetwork', type: 'Page' },
 { name: 'Excercise: Convolutional Neural Network', link: 'supervised/ExerciseConvolutionalNeuralNetwork', type: 'Page' },
 { name: 'Unsupervised Learning', link: '#', type: 'Heading' },
-{ name: 'Autoencoders', link: '#', type: 'Page'},
+{ name: 'Autoencoders', link: 'unsupervised/Autoencoders', type: 'Page'},
 { name: 'PCA Whitening', link: '#', type: 'Page'},
 { name: 'Exercise: PCA Whitening', link: '#', type: 'Page'},
 { name: 'ICA', link: '#', type: 'Page'},
