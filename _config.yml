@@ -1,4 +1,4 @@
 name: Unsupervised Feature Learning and Deep Learning Tutorial
-baseurl: /ufldl_tutorial
+baseurl: http://ufldl.stanford.edu/tut
 pygments: true
 permalink: pretty
