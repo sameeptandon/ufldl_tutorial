@@ -22,6 +22,7 @@ var pages = [
 { name: 'Autoencoders', link: 'unsupervised/Autoencoders', type: 'Page'},
 { name: 'PCA Whitening', link: 'unsupervised/PCAWhitening', type: 'Page'},
 { name: 'Exercise: PCA Whitening', link: 'unsupervised/ExercisePCAWhitening', type: 'Page'},
+{ name: 'Sparse Coding', link: 'unsupervised/SparseCoding', type: 'Page'},
 { name: 'ICA', link: 'unsupervised/ICA', type: 'Page'},
 { name: 'RICA', link: 'unsupervised/RICA', type: 'Page'},
 { name: 'Exercise: RICA', link: 'unsupervised/ExerciseRICA', type: 'Page'},
