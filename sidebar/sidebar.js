@@ -27,6 +27,6 @@ var pages = [
 { name: 'RICA', link: 'unsupervised/RICA', type: 'Page'},
 { name: 'Exercise: RICA', link: 'unsupervised/ExerciseRICA', type: 'Page'},
 { name: 'Self-Taught Learning', link: '#', type: 'Heading' },
-{ name: 'Self-Taught Learning', link: '#', type: 'Page'},
-{ name: 'Exercise: Self-Taught Learning', link: '#', type: 'Page'},
+{ name: 'Self-Taught Learning', link: 'selftaughtlearning/SelfTaughtLearning', type: 'Page'},
+{ name: 'Exercise: Self-Taught Learning', link: 'selftaughtlearning/ExerciseSelfTaughtLearning', type: 'Page'},
 ];
