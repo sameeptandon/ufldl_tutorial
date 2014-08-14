@@ -36,7 +36,7 @@ In this step, you will implement PCA to obtain <m>x_{\rm rot}</m>, the matrix in
 
 To verify that your implementation of PCA is correct, you should check the covariance matrix for the rotated data <m>x_{\rm rot}</m>.  PCA guarantees that the covariance matrix for the rotated data is a diagonal matrix (a matrix with non-zero entries only along the main diagonal). Implement code to compute the covariance matrix and verify this property. One way to do this is to compute the covariance matrix, and visualise it using the MATLAB command `imagesc`. The image should show a coloured diagonal line against a blue background. For this dataset, because of the range of the diagonal entries, the diagonal line may not be apparent, so you might get a figure like the one show below, but this trick of visualizing using `imagesc` will come in handy later in this exercise. 
 
-<img src="{{site.baseurl}}/images/pca_covar.png" width="100%">
+<img src="{{site.baseurl}}/images/Pca_covar.png" width="100%">
 
 ### Step 2: Find number of components to retain ###
 
@@ -50,10 +50,10 @@ To see the effect of dimension reduction, go back from <m>\tilde{x}</m> to produ
 
 <table>
 <tr>
-<td> <img src="{{site.baseurl}}/images/raw_images.png" width="100%"> </td>
-<td> <img src="{{site.baseurl}}/images/pca_images.png" width="100%"> </td> 
+<td> <img src="{{site.baseurl}}/images/Raw_images.png" width="100%"> </td>
+<td> <img src="{{site.baseurl}}/images/Pca_images.png" width="100%"> </td> 
 <td>
-<img src="{{site.baseurl}}/images/pca_images_90.png" width="100%"> 
+<img src="{{site.baseurl}}/images/Pca_images_90.png" width="100%"> 
 </td>
 </tr>
 <tr>
@@ -82,10 +82,10 @@ Now implement PCA with whitening and regularization to produce the matrix <m>x_{
  <table>
  <tr>
  <td>
- <img src="{{site.baseurl}}/images/pca_whitened_covar.png" width="100%">
+ <img src="{{site.baseurl}}/images/Pca_whitened_covar.png" width="100%">
  </td>
  <td>
- <img src="{{site.baseurl}}/images/pca_whitened_unregularised_covar.png" width="100%">
+ <img src="{{site.baseurl}}/images/Pca_whitened_unregularised_covar.png" width="100%">
  </td>
  </tr>
  <tr>
@@ -102,9 +102,9 @@ Now implement PCA with whitening and regularization to produce the matrix <m>x_{
  <tr>
  <td>
 
- <img src="{{site.baseurl}}/images/zca_whitened_images.png" width="100%">
+ <img src="{{site.baseurl}}/images/Zca_whitened_images.png" width="100%">
  </td><td>
- <img src="{{site.baseurl}}/images/raw_images.png" width="100%">
+ <img src="{{site.baseurl}}/images/Raw_images.png" width="100%">
  </td>
  </tr>
  <tr>
