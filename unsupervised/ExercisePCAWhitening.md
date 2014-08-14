@@ -18,7 +18,7 @@ to modify is `pca_gen.m`.
 
 The starter code contains code to load a set of MNIST images. The raw patches will look something like this:
 
-<img src="{{site.baseurl}}/images/raw_images.png" width="100%">
+<img src="{{site.baseurl}}/images/Raw_images.png" width="100%">
 
 These patches are stored as column vectors <m>x^{(i)} \in \mathbb{R}^{144}</m> in the <m>144 \times 10000</m> matrix <m>x</m>.
 
