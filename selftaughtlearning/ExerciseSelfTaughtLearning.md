@@ -41,7 +41,7 @@ Go to the `stl` folder of the exercises code, which contains starter code for th
 In the starter code, we have provided code to split the MNIST dataset into 50000 "unlabelled" images and 10000 "labelled" images. We also provide code to randomly extract 200000 8-by-8 patches from the unlabelled dataset.
 You will need to whiten the patches using the `zca2.m` function seen in the RICA exercise. Then you will train an RICA on the 200000 patches, using the same `softICACost.m` function as you had written in the previous exercise.  (From the earlier exercise, you should have a working and vectorized implementation of the RICA.) For us, the training step took less than 25 minutes on a fast desktop.  When training is complete, you should get a visualization of pen strokes like the image shown below: 
 
-<img src="{{site.baseurl}}/images/selfTaughtFeatures.png" width="400px">
+<img src="{{site.baseurl}}/images/SelfTaughtFeatures.png" width="400px">
 
 Informally, the features learned by the RICA should correspond to edge detectors.
 
