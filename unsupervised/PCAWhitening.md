@@ -460,7 +460,7 @@ Next, PCA computes the eigenvectors of <m>\Sigma</m>.  One could do this using t
  [U,S,V] = svd(sigma);
 {% endhighlight %}
 
-then the matrix <m>U</m> will contain the eigenvectors of <m>\Sigma</m> (one eigenvector per column,  sorted in order from top to bottom eigenvector), and the diagonal entries of the matrix <m>S</m> will contain the corresponding eigenvalues (also sorted in decreasing order).  The matrix <m>V</m> will be equal to transpose of <m>U</m>, and can be safely ignored.
+then the matrix <m>U</m> will contain the eigenvectors of <m>\Sigma</m> (one eigenvector per column,  sorted in order from top to bottom eigenvector), and the diagonal entries of the matrix <m>S</m> will contain the corresponding eigenvalues (also sorted in decreasing order).  The matrix <m>V</m> will be equal to <m>U</m>, and can be safely ignored.
 
 (Note: The <tt>svd</tt> function actually computes the singular vectors and singular values of a matrix, which for the special case of a symmetric positive semi-definite matrix---which is all that we're concerned with here---is equal to its eigenvectors and eigenvalues.  A full discussion of singular vectors vs. eigenvectors is beyond the scope of these notes.)
 
